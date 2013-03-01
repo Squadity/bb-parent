@@ -3,7 +3,7 @@
 	<groupId>net.bolbat</groupId>
 	<artifactId>bb-parent</artifactId>
 	<name>BB Parent POM</name>
-	<version>2-SNAPSHOT</version>
+	<version>2</version>
 	<packaging>pom</packaging>
 	<description>Defines various standards for all BB.Corp Maven Projects</description>
 	<url>http://confluence.infra.bolbat.net/</url>
@@ -317,6 +317,7 @@
 	    <connection>scm:git:ssh://git@stash.infra.bolbat.net:9074/BBPARENT/main.git</connection>
 	    <developerConnection>scm:git:ssh://git@stash.infra.bolbat.net:9074/BBPARENT/main.git</developerConnection>
 	    <url>http://stash.infra.bolbat.net/scm/BBPARENT/main.git</url>
-  	</scm>
+  	  <tag>bb-parent-2</tag>
+  </scm>
 
 </project>
