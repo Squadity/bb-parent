@@ -3,11 +3,11 @@
 	<groupId>net.bolbat</groupId>
 	<artifactId>bb-parent</artifactId>
 	<name>BB Parent POM</name>
-	<version>4-SNAPSHOT</version>
+	<version>1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>Defines various standards for all BB.Corp Maven Projects</description>
 	<url>http://confluence.infra.bolbat.net/</url>
-	<inceptionYear>2012</inceptionYear>
+	<inceptionYear>2013</inceptionYear>
 
 	<organization>
 		<name>BB Corp</name>
@@ -342,9 +342,9 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:svn:http://svn.anotheria.net/bolbat/bb-parent/trunk</connection>
-		<developerConnection>scm:svn:http://svn.anotheria.net/bolbat/bb-parent/trunk</developerConnection>
-		<url>svn:http://svn.anotheria.net/bolbat/bb-parent/trunk</url>
-	</scm>
+	    <connection>scm:git:ssh://git@stash.infra.bolbat.net:9074/BBPARENT/main.git</connection>
+	    <developerConnection>scm:git:ssh://git@stash.infra.bolbat.net:9074/BBPARENT/main.git</developerConnection>
+	    <url>http://stash.infra.bolbat.net/scm/BBPARENT/main.git</url>
+  	</scm>
 
 </project>
