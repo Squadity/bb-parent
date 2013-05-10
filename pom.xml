@@ -62,7 +62,8 @@
 
 		<!-- general configuration properties -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<sources.version>1.6</sources.version>
+		<maven.compiler.source>1.7</maven.compiler.source>
+  		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
 
 	<dependencyManagement>
@@ -210,8 +211,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>${sources.version}</source>
-					<target>${sources.version}</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -272,7 +274,7 @@
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>${maven-pmd-plugin.version}</version>
 				<configuration>
-					<targetJdk>${sources.version}</targetJdk>
+					<targetJdk>${maven.compiler.source}</targetJdk>
 				</configuration>
 			</plugin>
 			<plugin>
