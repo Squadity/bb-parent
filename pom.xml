@@ -5,7 +5,7 @@
 	<name>BB Parent POM</name>
 	<version>6-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<description>Defines various standards for all BB.Corp Maven Projects</description>
+	<description>Defines various standards for all BB Maven Projects</description>
 	<url>http://confluence.infra.bolbat.net/</url>
 	<inceptionYear>2013</inceptionYear>
 
@@ -31,6 +31,20 @@
 		<system>Jenkins</system>
 		<url>http://jenkins.infra.bolbat.net</url>
 	</ciManagement>
+
+	<developers>
+		<developer>
+			<id>bb-team</id>
+			<name>BB Team</name>
+			<email>info@bolbat.net</email>
+			<organization>bolbat.net</organization>
+			<organizationUrl>http://bolbat.net</organizationUrl>
+			<url>http://bolbat.net</url>
+			<roles>
+				<role>Everything</role>
+			</roles>
+		</developer>
+	</developers>
 
 	<properties>
 		<!-- general dependencies versions -->
@@ -265,6 +279,36 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>release-sign-artifacts</id>
+			<activation>
+				<property>
+					<name>performRelease</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.4</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 	<reporting>
 		<plugins>
