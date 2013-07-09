@@ -80,7 +80,7 @@
 		<apt-maven-plugin.version>1.0-alpha-5</apt-maven-plugin.version>
 
 		<!-- custom dependencies versions -->
-		<bb-buildutils.version>1</bb-buildutils.version>
+		<bb-buildutils.version>2</bb-buildutils.version>
 
 		<!-- general configuration properties -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
