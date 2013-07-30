@@ -1,11 +1,8 @@
 # Maven build directory 
-target/**
-target/**/*
+target/
 
 # SVN related dir's/files
 .svn/
-.svn/**
-.svn/**/*
 
 # Java related dir'sfiles
 *.class
@@ -14,15 +11,18 @@ target/**/*
 *.ear
 
 # Eclipse related dir's/files
+.project
+.metadata
+.classpath
 .settings/
-.settings/**
-.settings/**/*
-bin/**
-tmp/**
-tmp/**/*
+bin/
+tmp/
 
 # IntelliJ related dir's/files
 *.iml
 *.ipr
 *.iws
 .idea/
+
+# Other temporary dir's/files
+logs/
