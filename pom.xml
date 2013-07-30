@@ -53,33 +53,43 @@
 	</developers>
 
 	<properties>
-		<release.arguments />
+		<!-- logging dependencies versions -->
+		<slf4j.version>1.7.5</slf4j.version>
+		<slf4j-api.version>${slf4j.version}</slf4j-api.version>
+		<slf4j-log4j12.version>${slf4j.version}</slf4j-log4j12.version>
+		<slf4j-jcl.version>${slf4j.version}</slf4j-jcl.version>
+		<slf4j-jdk14.version>${slf4j.version}</slf4j-jdk14.version>
+		<logback-classic.version>1.0.13</logback-classic.version>
+		<log4j.version>1.2.17</log4j.version>
+		<commons-logging.version>1.1.3</commons-logging.version>
 
-		<!-- general dependencies versions -->
-		<log4j.version>1.2.16</log4j.version>
+		<!-- common dependencies versions -->
 		<commons-lang.version>2.6</commons-lang.version>
 		<commons-beanutils.version>1.8.3</commons-beanutils.version>
 		<commons-collections.version>3.2.1</commons-collections.version>
-		<commons-codec.version>1.7</commons-codec.version>
+		<commons-codec.version>1.8</commons-codec.version>
 		<commons-io.version>2.4</commons-io.version>
-		<commons-net.version>3.2</commons-net.version>
+		<commons-net.version>3.3</commons-net.version>
 		<commons-dbcp.version>1.4</commons-dbcp.version>
 		<servlet-api.version>3.0.1</servlet-api.version>
 		<jsp-api.version>2.2.1</jsp-api.version>
 		<junit.version>4.11</junit.version>
 
 		<!-- plugin dependencies versions -->
-		<maven-release-plugin.version>2.4</maven-release-plugin.version>
+		<maven-release-plugin.version>2.4.1</maven-release-plugin.version>
 		<maven-jar-plugin.version>2.4</maven-jar-plugin.version>
-		<maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
-		<cobertura-maven-plugin.version>2.5.2</cobertura-maven-plugin.version>
-		<maven-surefire-plugin.version>2.14</maven-surefire-plugin.version>
+		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+		<maven-surefire-plugin.version>2.15</maven-surefire-plugin.version>
 		<maven-pmd-plugin.version>3.0.1</maven-pmd-plugin.version>
-		<findbugs-maven-plugin.version>2.5.2</findbugs-maven-plugin.version>
 		<maven-checkstyle-plugin.version>2.10</maven-checkstyle-plugin.version>
+		<maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
+		<maven-gpg-plugin.version>1.4</maven-gpg-plugin.version>
+		<maven-source-plugin.version>2.2.1</maven-source-plugin.version>
+		<cobertura-maven-plugin.version>2.5.2</cobertura-maven-plugin.version>
+		<findbugs-maven-plugin.version>2.5.2</findbugs-maven-plugin.version>
 		<apt-maven-plugin.version>1.0-alpha-5</apt-maven-plugin.version>
 
-		<!-- custom dependencies versions -->
+		<!-- utility dependencies versions -->
 		<bb-buildutils.version>2</bb-buildutils.version>
 
 		<!-- general configuration properties -->
@@ -90,12 +100,44 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- Common dependencies -->
+			<!-- Logging dependencies -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j-log4j12.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-jcl</artifactId>
+				<version>${slf4j-jcl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-jdk14</artifactId>
+				<version>${slf4j-jdk14.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback-classic.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>${log4j.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>${commons-logging.version}</version>
+			</dependency>
+
+			<!-- Common dependencies -->
 			<dependency>
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
@@ -193,11 +235,7 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>${maven-compiler-plugin.version}</version>
 				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>cobertura-maven-plugin</artifactId>
-					<version>${cobertura-maven-plugin.version}</version>
-				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
@@ -209,14 +247,19 @@
 					<version>${maven-pmd-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>findbugs-maven-plugin</artifactId>
-					<version>${findbugs-maven-plugin.version}</version>
-				</plugin>
-				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-checkstyle-plugin</artifactId>
 					<version>${maven-checkstyle-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>cobertura-maven-plugin</artifactId>
+					<version>${cobertura-maven-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>findbugs-maven-plugin</artifactId>
+					<version>${findbugs-maven-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -307,7 +350,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.4</version>
+						<version>${maven-gpg-plugin.version}</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
@@ -328,7 +371,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>
-						<version>2.2.1</version>
+						<version>${maven-source-plugin.version}</version>
 						<executions>
 							<execution>
 								<id>attach-sources</id>
@@ -341,7 +384,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>2.9.1</version>
+						<version>${maven-javadoc-plugin.version}</version>
 						<executions>
 							<execution>
 								<id>attach-javadocs</id>
@@ -354,7 +397,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.4</version>
+						<version>${maven-gpg-plugin.version}</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
