@@ -82,6 +82,8 @@
 		<maven-jar-plugin.version>2.4</maven-jar-plugin.version>
 		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
 		<maven-surefire-plugin.version>2.15</maven-surefire-plugin.version>
+		<maven-project-info-reports-plugin.version>2.7</maven-project-info-reports-plugin.version>
+		<maven-jxr-plugin.version>2.3</maven-jxr-plugin.version>
 		<maven-pmd-plugin.version>3.0.1</maven-pmd-plugin.version>
 		<maven-checkstyle-plugin.version>2.10</maven-checkstyle-plugin.version>
 		<maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
@@ -92,7 +94,7 @@
 		<apt-maven-plugin.version>1.0-alpha-5</apt-maven-plugin.version>
 
 		<!-- utility dependencies versions -->
-		<bb-buildutils.version>2</bb-buildutils.version>
+		<bb-buildutils.version>3</bb-buildutils.version>
 
 		<!-- general configuration properties -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -241,6 +243,16 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${maven-surefire-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>${maven-project-info-reports-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jxr-plugin</artifactId>
+					<version>${maven-jxr-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -416,6 +428,11 @@
 
 	<reporting>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>${maven-jxr-plugin.version}</version>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
