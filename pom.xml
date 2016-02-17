@@ -3,7 +3,7 @@
 	<groupId>net.bolbat</groupId>
 	<artifactId>bb-parent</artifactId>
 	<name>BB Parent POM</name>
-	<version>12-SNAPSHOT</version>
+	<version>13-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>Defines various standards for all BB Maven Projects</description>
 	<url>http://confluence.infra.bolbat.net/</url>
