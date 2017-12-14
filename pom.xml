@@ -144,19 +144,19 @@
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-jdk14</artifactId>
 				<version>${slf4j-jdk14.version}</version>
-				<scope>provided</scope>
+				<!-- <scope>provided</scope> --> <!-- should be provided for logging with logback -->
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-jcl</artifactId>
 				<version>${slf4j-jcl.version}</version>
-				<scope>provided</scope>
+				<!-- <scope>provided</scope> --> <!-- should be provided for logging with logback -->
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-log4j12</artifactId>
 				<version>${slf4j-log4j12.version}</version>
-				<scope>provided</scope>
+				<!-- <scope>provided</scope> --> <!-- should be provided for logging with logback -->
 			</dependency>
 			<!-- bridges to slf4j -->
 			<dependency>
@@ -195,19 +195,19 @@
 				<groupId>commons-logging</groupId>
 				<artifactId>commons-logging</artifactId>
 				<version>${commons-logging.version}</version>
-				<scope>provided</scope>
+				<!-- <scope>provided</scope> --> <!-- should be provided for logging with logback and enabled related bridge -->
 			</dependency>
 			<dependency>
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>${log4j.version}</version>
-				<scope>provided</scope>
+				<!-- <scope>provided</scope> --> <!-- should be provided for logging with logback and enabled related bridge -->
 			</dependency>
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
 				<artifactId>log4j-core</artifactId>
 				<version>${log4j2-core.version}</version>
-				<scope>provided</scope>
+				<!-- <scope>provided</scope> --> <!-- should be provided for logging with logback and enabled related bridge -->
 			</dependency>
 
 			<!-- Common dependencies -->
