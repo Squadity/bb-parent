@@ -107,7 +107,8 @@
 		<maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
 		<maven-war-plugin.version>3.2.0</maven-war-plugin.version>
 		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-		<maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
+		<maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
+		<maven-site-plugin.version>3.6</maven-site-plugin.version>
 		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
 		<maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
 		<maven-failsafe-plugin.version>2.20.1</maven-failsafe-plugin.version>
@@ -129,6 +130,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<javadoc.opts>-Xdoclint:none</javadoc.opts>
+		<additionalparam>${javadoc.opts}</additionalparam>
 	</properties>
 
 	<dependencyManagement>
@@ -385,6 +388,11 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>${maven-site-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>${maven-compiler-plugin.version}</version>
 				</plugin>
@@ -529,7 +537,7 @@
 									<goal>jar</goal>
 								</goals>
 								<configuration> <!-- disable checking -->
-									<additionalparam>-Xdoclint:none</additionalparam>
+									<additionalparam>${javadoc.opts}</additionalparam>
 								</configuration>
 							</execution>
 						</executions>
@@ -643,7 +651,7 @@
 									<goal>jar</goal>
 								</goals>
 								<configuration> <!-- disable checking -->
-									<additionalparam>-Xdoclint:none</additionalparam>
+									<additionalparam>${javadoc.opts}</additionalparam>
 								</configuration>
 							</execution>
 						</executions>
