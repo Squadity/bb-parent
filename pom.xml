@@ -745,7 +745,7 @@
 		<snapshotRepository>
 			<id>bb-snapshot</id>
 			<name>BB Snapshot Repository</name>
-			<url>http://nexus.infra.bolbat.net/content/repositories/snapshots</url>
+			<url>https://nexus.infra.bolbat.net/content/repositories/snapshots</url>
 			<uniqueVersion>true</uniqueVersion>
 		</snapshotRepository>
 	</distributionManagement>
