@@ -102,6 +102,7 @@
 		<apiguardian-api.version>1.0.0</apiguardian-api.version> <!-- To avoid compiler warnings about @API annotations in JUnit code -->
 		<org-opentest4j.version>1.1.1</org-opentest4j.version> <!-- To avoid compiler warnings about @API annotations in JUnit code -->
 		<mockito.version>2.27.0</mockito.version>
+		<powermock.version>2.0.2</powermock.version>
 		<jmh.version>1.21</jmh.version>
 
 		<!-- Plugin dependencies -->
@@ -363,6 +364,18 @@
 				<groupId>org.mockito</groupId>
 				<artifactId>mockito-junit-jupiter</artifactId>
 				<version>${mockito.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-module-junit4</artifactId>
+				<version>${powermock.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-api-mockito2</artifactId>
+				<version>${powermock.version}</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
