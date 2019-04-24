@@ -101,7 +101,7 @@
 		<junit-vintage.version>${junit-jupiter.version}</junit-vintage.version>
 		<apiguardian-api.version>1.0.0</apiguardian-api.version> <!-- To avoid compiler warnings about @API annotations in JUnit code -->
 		<org-opentest4j.version>1.1.1</org-opentest4j.version> <!-- To avoid compiler warnings about @API annotations in JUnit code -->
-		<mockito-all.version>1.10.19</mockito-all.version>
+		<mockito.version>2.27.0</mockito.version>
 		<jmh.version>1.21</jmh.version>
 
 		<!-- Plugin dependencies -->
@@ -355,8 +355,14 @@
 			</dependency>
 			<dependency>
 				<groupId>org.mockito</groupId>
-				<artifactId>mockito-all</artifactId>
-				<version>${mockito-all.version}</version>
+				<artifactId>mockito-core</artifactId>
+				<version>${mockito.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-junit-jupiter</artifactId>
+				<version>${mockito.version}</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
