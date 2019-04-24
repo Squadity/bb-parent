@@ -77,17 +77,17 @@
 
 		<!-- Common dependencies -->
 		<commons-lang.version>2.6</commons-lang.version>
-		<commons-lang3.version>3.7</commons-lang3.version>
+		<commons-lang3.version>3.9</commons-lang3.version>
 		<commons-math3.version>3.6.1</commons-math3.version>
 		<commons-beanutils.version>1.9.3</commons-beanutils.version>
 		<commons-collections.version>3.2.2</commons-collections.version>
-		<commons-codec.version>1.11</commons-codec.version>
+		<commons-codec.version>1.12</commons-codec.version>
 		<commons-io.version>2.6</commons-io.version>
 		<commons-net.version>3.6</commons-net.version>
 		<commons-validator.version>1.6</commons-validator.version>
 		<commons-dbcp.version>1.4</commons-dbcp.version>
 		<commons-dbcp2.version>2.1.1</commons-dbcp2.version>
-		<guava.version>23.5-jre</guava.version>
+		<guava.version>27.1-jre</guava.version>
 
 		<!-- Provided dependencies versions -->
 		<servlet-api.version>3.1.0</servlet-api.version>
