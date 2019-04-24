@@ -103,6 +103,7 @@
 		<org-opentest4j.version>1.1.1</org-opentest4j.version> <!-- To avoid compiler warnings about @API annotations in JUnit code -->
 		<mockito.version>2.27.0</mockito.version>
 		<powermock.version>2.0.2</powermock.version>
+		<awaitility.version>3.1.6</awaitility.version>
 		<jmh.version>1.21</jmh.version>
 
 		<!-- Plugin dependencies -->
@@ -376,6 +377,18 @@
 				<groupId>org.powermock</groupId>
 				<artifactId>powermock-api-mockito2</artifactId>
 				<version>${powermock.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.awaitility</groupId>
+				<artifactId>awaitility</artifactId>
+				<version>${awaitility.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.awaitility</groupId>
+				<artifactId>awaitility-proxy</artifactId>
+				<version>${awaitility.version}</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
