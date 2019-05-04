@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.bolbat</groupId>
 	<artifactId>bb-parent</artifactId>
 	<name>BB Parent POM</name>
-	<version>14-SNAPSHOT</version>
+	<version>14</version>
 	<packaging>pom</packaging>
 	<description>Defines various standards for all BB Maven Projects</description>
 	<url>http://confluence.infra.bolbat.net/</url>
@@ -856,7 +855,7 @@
 		<connection>scm:git:ssh://git@bitbucket.infra.bolbat.net:9074/BBPARENT/main.git</connection>
 		<developerConnection>scm:git:ssh://git@bitbucket.infra.bolbat.net:9074/BBPARENT/main.git</developerConnection>
 		<url>http://bitbucket.infra.bolbat.net/scm/BBPARENT/main.git</url>
-		<tag>HEAD</tag>
+		<tag>bb-parent-14</tag>
 	</scm>
 
 </project>
