@@ -531,7 +531,7 @@
 	<scm>
 		<connection>scm:git:ssh://git@code.solutionary.tech:9074/bb/bb-parent.git</connection>
 		<developerConnection>scm:git:ssh://git@code.solutionary.tech:9074/bb/bb-parent.git</developerConnection>
-		<url>https://code.solutionary.tech/projects/BB/repos/bb-parent</url>
+		<url>https://code.solutionary.tech/projects/BB/repos/bb-parent/</url>
 	</scm>
 
 </project>
