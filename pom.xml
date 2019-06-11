@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.bolbat</groupId>
 	<artifactId>bb-parent</artifactId>
@@ -6,7 +7,7 @@
 	<version>16-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>Defines various standards for all BB Maven Projects</description>
-	<url>http://confluence.infra.bolbat.net/</url>
+	<url>https://confluence.solutionary.tech</url>
 	<inceptionYear>2013</inceptionYear>
 
 	<parent>
@@ -16,8 +17,8 @@
 	</parent>
 
 	<organization>
-		<name>BB Corp</name>
-		<url>http://bolbat.net/</url>
+		<name>Solutionary</name>
+		<url>https://solutionary.tech</url>
 	</organization>
 
 	<licenses>
@@ -30,22 +31,22 @@
 
 	<issueManagement>
 		<system>JIRA</system>
-		<url>http://jira.infra.bolbat.net</url>
+		<url>https://jira.solutionary.tech</url>
 	</issueManagement>
 
 	<ciManagement>
 		<system>Jenkins</system>
-		<url>http://jenkins.infra.bolbat.net</url>
+		<url>https://jenkins.solutionary.tech</url>
 	</ciManagement>
 
 	<developers>
 		<developer>
-			<id>bb-team</id>
-			<name>BB Team</name>
-			<email>info@bolbat.net</email>
-			<organization>bolbat.net</organization>
-			<organizationUrl>http://bolbat.net</organizationUrl>
-			<url>http://bolbat.net</url>
+			<id>solutionary-team</id>
+			<name>Solutionary Team</name>
+			<email>info@solutionary.tech</email>
+			<organization>solutionary.tech</organization>
+			<organizationUrl>https://solutionary.tech</organizationUrl>
+			<url>https://solutionary.tech</url>
 			<roles>
 				<role>Everything</role>
 			</roles>
@@ -520,18 +521,17 @@
 	<distributionManagement>
 		<!-- use the following if you ARE using a snapshot version. -->
 		<snapshotRepository>
-			<id>bb-snapshot</id>
-			<name>BB Snapshot Repository</name>
-			<url>https://nexus.infra.bolbat.net/content/repositories/snapshots</url>
+			<id>solutionary-snapshot</id>
+			<name>Snapshot Repository</name>
+			<url>https://nexus.solutionary.tech/content/repositories/snapshots</url>
 			<uniqueVersion>true</uniqueVersion>
 		</snapshotRepository>
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:ssh://git@bitbucket.infra.bolbat.net:9074/BBPARENT/main.git</connection>
-		<developerConnection>scm:git:ssh://git@bitbucket.infra.bolbat.net:9074/BBPARENT/main.git</developerConnection>
-		<url>http://bitbucket.infra.bolbat.net/scm/BBPARENT/main.git</url>
-		<tag>HEAD</tag>
+		<connection>scm:git:ssh://git@code.solutionary.tech:9074/bb/bb-parent.git</connection>
+		<developerConnection>scm:git:ssh://git@code.solutionary.tech:9074/bb/bb-parent.git</developerConnection>
+		<url>https://code.solutionary.tech/projects/BB/repos/bb-parent</url>
 	</scm>
 
 </project>
