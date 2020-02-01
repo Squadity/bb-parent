@@ -85,7 +85,7 @@
 
 		<!-- Utility dependencies -->
 		<bb-buildutils.version>5</bb-buildutils.version>
-		<checkstyle.version>8.20</checkstyle.version>
+		<checkstyle.version>8.29</checkstyle.version>
 
 		<!-- General configuration -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
