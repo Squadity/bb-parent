@@ -84,7 +84,7 @@
 		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 
 		<!-- Utility dependencies -->
-		<bb-buildutils.version>5</bb-buildutils.version>
+		<bb-buildutils.version>6-SNAPSHOT</bb-buildutils.version>
 		<checkstyle.version>8.29</checkstyle.version>
 
 		<!-- General configuration -->
