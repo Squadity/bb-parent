@@ -521,7 +521,7 @@
 	<distributionManagement>
 		<!-- use the following if you ARE using a snapshot version. -->
 		<snapshotRepository>
-			<id>solutionary-snapshot</id>
+			<id>solutionary-snapshots</id>
 			<name>Snapshot Repository</name>
 			<url>https://nexus.solutionary.tech/content/repositories/snapshots</url>
 			<uniqueVersion>true</uniqueVersion>
